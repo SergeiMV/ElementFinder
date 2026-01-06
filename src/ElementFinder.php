@@ -63,8 +63,8 @@ class ElementFinder implements ElementFinderInterface
      */
     public function __construct(
         string $data,
-        int $documentType = null,
-        ExpressionTranslatorInterface $translator = null
+        ?int $documentType = null,
+        ?ExpressionTranslatorInterface $translator = null
     ) {
         $this->dom = new DomDocument();
         $this->expressionTranslator = $translator ?? new XpathExpression();
